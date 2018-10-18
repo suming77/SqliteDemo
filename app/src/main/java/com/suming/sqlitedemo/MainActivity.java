@@ -15,6 +15,7 @@ import java.util.List;
  * @创建时间 2018/9/29 16:45
  * @类描述 ${TODO}调用
  *
+ * 这里主要是基本的增删改查（提供了多种不同的写法）
  * 增删改查的数据是写死的，先增加数据，再点击下面的按钮
  * 具体实现还需要根据实际需求灵活改动
  */
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mList.addAll(mDao.getAllData());
         }
 
-        System.out.println("所有数据：" + mList.size() + "," +/* new Gson().toJson(*/mList);
         mAdapter = new BleListAdapter(this, mList);
         mListView.setAdapter(mAdapter);
     }
